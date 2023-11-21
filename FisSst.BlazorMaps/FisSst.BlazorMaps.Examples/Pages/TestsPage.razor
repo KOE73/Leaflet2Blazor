@@ -1,4 +1,5 @@
 ﻿@page "/tests"
+@inherits DemoBase
 
 @using System.Diagnostics;
 
@@ -17,12 +18,12 @@
             <MatTextField @bind-Value="@NumberOfMarkers" Label="A number of markers to add" Outlined="true"></MatTextField>
         </MatThemeProvider>
     </p>
-    <SidePanelButton Label="add markers"
-                     IconSrc="@Icons.MarkersAddMarkersIconSrc"
-                     OnClick="async () => await AddMarkers()" />
-    <SidePanelButton Label="remove markers"
-                     IconSrc="@Icons.MarkersRemoveMarkersIconSrc"
-                     OnClick="async () => RemoveMarkers()" />
+    <SidePanelButton Label="add markers" IconSrc="@Icons.MarkersAddMarkersIconSrc" OnClick="async () => await AddMarkers()" />
+    <SidePanelButton Label="remove markers" IconSrc="@Icons.MarkersRemoveMarkersIconSrc" OnClick="async () => RemoveMarkers()" />
+
+    <SidePanelButton Label="add Lines" IconSrc="@Icons.MarkersAddMarkersIconSrc" OnClick="async () => await AddLines()" />
+    <SidePanelButton Label="remove Lines" IconSrc="@Icons.MarkersRemoveMarkersIconSrc" OnClick="async () => RemoveLines()" />
+
     <p class="number-of-markers-output">Number of markers on the map: @markers.Count</p>
     <p class="stopwatch">Action performed in: @stopwatch.ElapsedMilliseconds ms</p>
     <p class="note">Markers' random coordinates generation is not included in the measurement.</p>
@@ -61,6 +62,6 @@
 
         .side-panel .icon-wrapper .icon {
             height: auto;
-            transform:  translateX(10px)
+            transform: translateX(10px)
         }
 </style>

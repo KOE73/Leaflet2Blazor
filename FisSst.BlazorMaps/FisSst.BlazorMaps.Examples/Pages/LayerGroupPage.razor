@@ -1,0 +1,45 @@
+﻿@page "/layers"
+@inherits DemoBase
+
+<div class="top-container">
+    <h1 class="page-header">Objects</h1>
+</div>
+
+<div class="map-wrapper">
+    <Map @ref="mapRef" MapOptions="@mapOptions"></Map>
+</div>
+
+<div class="side-panel">
+    <h3 class="header">Add</h3>
+    <SidePanelButton Label="Layer group" IconSrc="@Icons.ObjectsAddPolylinesIconSrc" OnClick="async () => await AddLayerGroup()" />
+    <SidePanelButton Label="Feature group" IconSrc="@Icons.ObjectsAddPolylinesIconSrc" OnClick="async () => await AddFeatureGroup()" />
+    <SidePanelButton Label="GeoJSON group" IconSrc="@Icons.ObjectsAddPolylinesIconSrc" OnClick="async () => await AddGeoJSON()" />
+    <h3 class="header">Change</h3>
+    <SidePanelButton Label="Layer group" IconSrc="@Icons.ObjectsChangePolylinesIconSrc" OnClick="async () => await ChangeLayerGroup()" />
+    <SidePanelButton Label="Feature group" IconSrc="@Icons.ObjectsChangePolylinesIconSrc" OnClick="async () => await ChangeFeatureGroup()" />
+    <SidePanelButton Label="GeoJSON" IconSrc="@Icons.ObjectsChangePolylinesIconSrc" OnClick="async () => await ChangeGeoJSON()" />
+     <h3 class="header">Check methods</h3>
+    <SidePanelButton Label="Layer group" IconSrc="@Icons.ObjectsDeletePolylinesIconSrc" OnClick="async () => await CheckLayerGroup()" />
+    <SidePanelButton Label="Feature group" IconSrc="@Icons.ObjectsDeletePolylinesIconSrc" OnClick="async () => await CheckFeatureGroup()" />
+    <SidePanelButton Label="GeoJSON group" IconSrc="@Icons.ObjectsDeletePolylinesIconSrc" OnClick="async () => await CheckGeoJSON()" />
+     <h3 class="header">Delete</h3>
+    <SidePanelButton Label="Layer group" IconSrc="@Icons.ObjectsDeletePolylinesIconSrc" OnClick="async () => await DeleteLayerGroup()" />
+    <SidePanelButton Label="Feature group" IconSrc="@Icons.ObjectsDeletePolylinesIconSrc" OnClick="async () => await DeleteFeatureGroup()" />
+    <SidePanelButton Label="GeoJSON group" IconSrc="@Icons.ObjectsDeletePolylinesIconSrc" OnClick="async () => await DeleteGeoJSON()" />
+ </div>
+
+<style>
+    .side-panel {
+        min-width: 400px;
+        display: grid;
+        align-items: center;
+        grid-template-rows: repeat(3, 8vh 12vh);
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+        .side-panel .header {
+            grid-column: 1/-1;
+            font-size: 2.5vh !important;
+            margin: 0 !important;
+        }
+</style>

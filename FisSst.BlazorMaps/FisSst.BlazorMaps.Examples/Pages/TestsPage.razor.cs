@@ -1,98 +1,87 @@
 ﻿using MatBlazor;
-using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Threading.Tasks;
+using System.Linq;
 
-namespace FisSst.BlazorMaps.Examples.Pages
+namespace FisSst.BlazorMaps.Examples.Pages;
+
+public partial class TestsPage : DemoBase
 {
-    public partial class TestsPage
+    [Inject] IMarkerFactory MarkerFactory { get; init; }
+    [Inject] IPolylineFactory PolylineFactory { get; init; }
+
+    readonly double firstLat = Lat;
+    readonly double secondLat = Lat + 0.04;
+    readonly double firstLng = Lng;
+    readonly double secondLng = Lng + 0.04;
+    readonly MatTheme matTheme = new() { Primary = "#CBE54E" };
+
+    List<Marker> markers = new List<Marker>();
+    Stopwatch stopwatch = new Stopwatch();
+
+    public int NumberOfMarkers { get; set; }
+
+    async Task AddMarkers()
     {
-        private readonly double firstLat;
-        private readonly double secondLat;
-        private readonly double firstLng;
-        private readonly double secondLng;
-        private readonly MatTheme matTheme;
-        private Map mapRef;
-        private List<Marker> markers = new List<Marker>();
-        private Stopwatch stopwatch = new Stopwatch();
-        private MapOptions mapOptions;
+        List<LatLng> coordinates = GenerateListOfCoordinates();
 
-        public TestsPage()
+        stopwatch.Restart();
+        stopwatch.Start();
+
+        for(int i = 0; i < NumberOfMarkers; i++)
         {
-            this.firstLat = 50.24;
-            this.secondLat = 50.30;
-            this.firstLng = 18.62;
-            this.secondLng = 18.75;
-            this.matTheme = new MatTheme()
-            {
-                Primary = "#CBE54E"
-            };
-            this.mapOptions = new MapOptions()
-            {
-                DivId = "mapId",
-                Center = new LatLng(50.279133, 18.685578),
-                Zoom = 13,
-                UrlTileLayer = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                SubOptions = new MapSubOptions()
-                {
-                    Attribution = "&copy; <a lhref='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>",
-                    MaxZoom = 18,
-                    TileSize = 512,
-                    ZoomOffset = -1,
-                }
-            };
+            Marker marker = await MarkerFactory.CreateAndAddToMap(coordinates[i], mapRef);
+            markers.Add(marker);
         }
 
-        [Inject]
-        private IMarkerFactory MarkerFactory { get; init; }
-        public int NumberOfMarkers { get; set; }
+        stopwatch.Stop();
+        StateHasChanged();
+    }
 
-        private async Task AddMarkers()
-        {
-            List<LatLng> coordinates = GenerateListOfCoordinates();
+    void RemoveMarkers()
+    {
+        stopwatch.Restart();
+        stopwatch.Start();
+        markers.ForEach(async marker => await marker.Remove());
+        stopwatch.Stop();
+        markers = new();
+        StateHasChanged();
+    }
 
-            this.stopwatch.Restart();
-            this.stopwatch.Start();
+    Polyline? polyline;
+    async Task AddLines()
+    {
+        List<LatLng> coordinates = GenerateListOfCoordinates();
 
-            for (int i = 0; i < this.NumberOfMarkers; i++)
-            {
-                Marker marker = await MarkerFactory.CreateAndAddToMap(coordinates[i], this.mapRef);
-                this.markers.Add(marker);
-            }
+        stopwatch.Restart();
+        stopwatch.Start();
 
-            this.stopwatch.Stop();
-            StateHasChanged();
-        }
+        polyline = await PolylineFactory.CreateAndAddToMap(coordinates, mapRef);
 
-        private void RemoveMarkers()
-        {
-            this.stopwatch.Restart();
-            this.stopwatch.Start();
-            this.markers.ForEach(async marker => await marker.Remove());
-            this.stopwatch.Stop();
-            this.markers = new List<Marker>();
-            StateHasChanged();
-        }
+        stopwatch.Stop();
+        StateHasChanged();
+    }
 
-        private List<LatLng> GenerateListOfCoordinates()
-        {
-            List<LatLng> coordinates = new List<LatLng>();
-            for (int i = 0; i < this.NumberOfMarkers; i++)
-            {
-                coordinates.Add(GetRandomLatLng());
-            }
+    async void RemoveLines()
+    {
+        if(polyline is null) return;
 
-            return coordinates;
-        }
+        stopwatch.Restart();
+        stopwatch.Start();
+        await polyline.Remove();
+        stopwatch.Stop();
+        polyline = null;
+        StateHasChanged();
+    }
 
-        private LatLng GetRandomLatLng()
-        {
-            Random random = new Random();
-            double lat = random.NextDouble() * (this.secondLat - this.firstLat) + this.firstLat;
-            double lng = random.NextDouble() * (this.secondLng - this.firstLng) + this.firstLng;
-            return new LatLng(lat, lng);
-        }
+    List<LatLng> GenerateListOfCoordinates() => Enumerable.Range(0, NumberOfMarkers).Select(_ => GetRandomLatLng()).ToList();
+
+    Random random = new Random();
+    LatLng GetRandomLatLng()
+    {
+        double lat = random.NextDouble() * (secondLat - firstLat) + firstLat;
+        double lng = random.NextDouble() * (secondLng - firstLng) + firstLng;
+        return new LatLng(lat, lng);
     }
 }

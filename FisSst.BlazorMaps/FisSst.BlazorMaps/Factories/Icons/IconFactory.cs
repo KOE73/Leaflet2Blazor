@@ -2,32 +2,22 @@
 using Microsoft.JSInterop;
 using System.Threading.Tasks;
 
-namespace FisSst.BlazorMaps
+namespace FisSst.BlazorMaps;
+
+internal class IconFactory : JSRuntimeBase, IIconFactory
 {
-    internal class IconFactory : IIconFactory
+    const string create = "L.icon";
+    readonly IIconFactoryJsInterop IconFactoryJsInterop;
+
+    public IconFactory(
+        IJSRuntime jsRuntime,
+        IIconFactoryJsInterop iconFactoryJsInterop)
+        :base(jsRuntime)
     {
-        private const string create = "L.icon";
-        private readonly IJSRuntime jsRuntime;
-        private readonly IIconFactoryJsInterop iconFactoryJsInterop;
-
-        public IconFactory(
-            IJSRuntime jsRuntime,
-            IIconFactoryJsInterop iconFactoryJsInterop)
-        {
-            this.jsRuntime = jsRuntime;
-            this.iconFactoryJsInterop = iconFactoryJsInterop;
-        }
-
-        public async Task<Icon> Create(IconOptions options)
-        {
-            IJSObjectReference jsReference = await this.jsRuntime.InvokeAsync<IJSObjectReference>(create, options);
-            return new Icon(jsReference);
-        }
-
-        public async Task<Icon> CreateDefault()
-        {
-            IJSObjectReference jsReference = await this.iconFactoryJsInterop.CreateDefaultIcon();
-            return new Icon(jsReference);
-        }
+        IconFactoryJsInterop = iconFactoryJsInterop;
     }
+
+    public async Task<Icon> Create(IconOptions options) => new Icon(await InvokeAsyncJsObject(create, options));
+
+    public async Task<Icon> CreateDefault() => new Icon(await IconFactoryJsInterop.CreateDefaultIcon());
 }

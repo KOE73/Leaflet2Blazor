@@ -1,19 +1,80 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<!--<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">-->
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>FisSst.BlazorMaps.Examples</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace>FisSst.BlazorMaps.Examples</RootNamespace>
+		<Nullable>enable</Nullable>
+		<LangVersion>11</LangVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0" PrivateAssets="all" />
-    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
-    <PackageReference Include="MatBlazor" Version="2.7.0" />
-  </ItemGroup>
+	<ItemGroup>
+	  <Content Include="TS\AutoGraticule\L.AutoGraticule.css" />
+	  <Content Include="TS\AutoGraticule\L.AutoGraticule.ts" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FisSst.BlazorMaps\FisSst.BlazorMaps.csproj" />
-  </ItemGroup>
+	<!--<Target Name="RunNPM" BeforeTargets="PreBuildEvent">
+		<Exec Command="echo Running NPM" />
+		<Exec Command="npm install"  />
+		<Exec Command="npm run build" WorkingDirectory="./node_modules/leaflet" />
+		--><!--<Exec Command="npm run build" WorkingDirectory="wwwroot/npm" />--><!--
+	</Target>-->
+
+	<!--<Target Name="RunNPMInstall" BeforeTargets="PreBuildEvent">
+		<PropertyGroup>
+			<npmPath>"$(VsInstallRoot)\Msbuild\Microsoft\VisualStudio\NodeJs\npm.cmd"</npmPath>
+		</PropertyGroup>
+		<Exec Command="echo Running '$(npmPath)'" />
+		<Exec Command="$(npmPath) install" ConsoleToMsBuild="true" />
+		<Exec Command="$(npmPath) run build" ConsoleToMsBuild="true" />
+		<Exec Command="echo Completed running '$(npmPath)'" />
+	</Target>-->
+
+	<ItemGroup>
+		<!--<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0" />-->
+		<!--<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0" PrivateAssets="all" />-->
+		<PackageReference Include="GeoJSON.Net" Version="1.2.19" />
+		<PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.3.2">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
+		<PackageReference Include="MatBlazor" Version="2.10.0" />
+	</ItemGroup>
+
+
+
+	<ItemGroup>
+		<ProjectReference Include="..\FisSst.BlazorMaps\FisSst.BlazorMaps.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="System.Threading.Tasks" />
+		<Using Include="Microsoft.AspNetCore.Components" />
+		<Using Include="Microsoft.JSInterop" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\npm\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="wwwroot\js\tracks.Editable.js">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="wwwroot\js\tracks.js">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="wwwroot\js\tracks.js.map">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Update="wwwroot\js\tracks.min.js">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
 
 </Project>

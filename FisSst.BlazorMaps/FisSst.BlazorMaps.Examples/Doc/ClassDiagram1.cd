@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GeoJSON.Net.DoubleTenDecimalPlaceComparer">
+    <Position X="29" Y="7.5" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GeoJSON.Net.GeoJSONObject" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="3" Width="2.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GeoJSON.Net.GeoJSONObjectType">
+    <Position X="9.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GeoJSON.Net.Geometry.GeometryCollection">
+    <Position X="14.5" Y="7.5" Width="2.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GeoJSON.Net.Geometry.LineString">
+    <Position X="20.75" Y="7.5" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GeoJSON.Net.Geometry.MultiLineString">
+    <Position X="20.75" Y="11.25" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GeoJSON.Net.Geometry.MultiPoint">
+    <Position X="17.75" Y="11.25" Width="2.5" />
+    <InheritanceLine Type="GeoJSON.Net.GeoJSONObject" FixedToPoint="true">
+      <Path>
+        <Point X="9.625" Y="5.709" />
+        <Point X="9.625" Y="7.125" />
+        <Point X="11.25" Y="7.125" />
+        <Point X="11.25" Y="10.875" />
+        <Point X="19.125" Y="10.875" />
+        <Point X="19.125" Y="11.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GeoJSON.Net.Geometry.MultiPolygon">
+    <Position X="23.75" Y="11.25" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GeoJSON.Net.Geometry.Point">
+    <Position X="17.75" Y="7.5" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GeoJSON.Net.Geometry.Polygon">
+    <Position X="23.75" Y="7.5" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GeoJSON.Net.Geometry.Position" BaseTypeListCollapsed="true">
+    <Position X="29" Y="11" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GeoJSON.Net.Feature.Feature">
+    <Position X="29" Y="9.25" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GeoJSON.Net.Feature.Feature&lt;TGeometry, TProps&gt;">
+    <Position X="11.75" Y="7.5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GeoJSON.Net.Feature.FeatureCollection">
+    <Position X="8.25" Y="7.5" Width="2.75" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="GeoJSON.Net.IGeoJSONObject">
+    <Position X="27" Y="11" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="GeoJSON.Net.Geometry.IGeometryObject">
+    <Position X="27" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="GeoJSON.Net.Geometry.IPosition">
+    <Position X="27" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

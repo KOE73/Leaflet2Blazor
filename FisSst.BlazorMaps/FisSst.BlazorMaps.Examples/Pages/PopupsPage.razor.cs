@@ -1,91 +1,37 @@
-﻿using Microsoft.AspNetCore.Components;
-using System.Threading.Tasks;
+﻿namespace FisSst.BlazorMaps.Examples.Pages;
 
-namespace FisSst.BlazorMaps.Examples.Pages
+public partial class PopupsPage: DemoBase
 {
-    public partial class PopupsPage
+    bool firstRender = true;
+    Marker marker1 = null!;
+    Marker marker2 = null!;
+
+    [Inject]
+    private IMarkerFactory MarkerFactory { get; init; }
+
+    protected async Task AddMarkers()
     {
-        private readonly LatLng center;
-        private readonly LatLng firstMarkerLatLng;
-        private readonly LatLng secondMarkerLatLng;
-        private Map mapRef;
-        private bool firstRender = true;
-        private Marker marker1;
-        private Marker marker2;
-        private MapOptions mapOptions;
-
-        public PopupsPage()
+        if (firstRender)
         {
-            this.center = new LatLng(50.279133, 18.685578);
-            this.firstMarkerLatLng = new LatLng(50.284324, 18.664683);
-            this.secondMarkerLatLng = new LatLng(50.285495, 18.691064);
-            this.mapOptions = new MapOptions()
-            {
-                DivId = "mapId",
-                Center = center,
-                Zoom = 13,
-                UrlTileLayer = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                SubOptions = new MapSubOptions()
-                {
-                    Attribution = "&copy; <a lhref='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>",
-                    MaxZoom = 18,
-                    TileSize = 512,
-                    ZoomOffset = -1,
-                }
-            };
-        }
-
-        [Inject]
-        private IMarkerFactory MarkerFactory { get; init; }
-
-        protected async Task AddMarkers()
-        {
-            if (firstRender)
-            {
-                this.firstRender = false;
-                this.marker1 = await this.MarkerFactory.CreateAndAddToMap(this.firstMarkerLatLng, this.mapRef);
-                this.marker2 = await this.MarkerFactory.CreateAndAddToMap(this.secondMarkerLatLng, this.mapRef);
-            }
-        }
-
-        private async Task BindPopup()
-        {
-            await this.marker1.BindPopup("Hi! This is a popup");
-        }
-
-        private async Task BindTooltip()
-        {
-            await this.marker2.BindTooltip("And this is a tooltip");
-        }
-
-        private async Task RemovePopup()
-        {
-            await this.marker1.UnbindPopup();
-        }
-
-        private async Task RemoveTooltip()
-        {
-            await this.marker2.UnbindTooltip();
-        }
-
-        private async Task UpdatePopup()
-        {
-            await this.marker1.SetPopupContent("Popup has changed its content");
-        }
-
-        private async Task UpdateTooltip()
-        {
-            await this.marker2.SetTooltipContent("Tooltip has changed its content");
-        }
-
-        private async Task TogglePopup()
-        {
-            await this.marker1.TogglePopup();
-        }
-
-        private async Task ToggleTooltip()
-        {
-            await this.marker2.ToggleTooltip();
+            firstRender = false;
+            marker1 = await MarkerFactory.CreateAndAddToMap(LLPnt_01, mapRef);
+            marker2 = await MarkerFactory.CreateAndAddToMap(LLPnt_02, mapRef);
         }
     }
+
+    async Task BindPopup() => await marker1.BindPopup("Hi! This is a popup");
+
+    async Task BindTooltip() => await marker2.BindTooltip("And this is a tooltip");
+
+    async Task RemovePopup() => await marker1.UnbindPopup();
+
+    async Task RemoveTooltip() => await marker2.UnbindTooltip();
+
+    async Task UpdatePopup() => await marker1.SetPopupContent("Popup has changed its content");
+
+    async Task UpdateTooltip() => await marker2.SetTooltipContent("Tooltip has changed its content");
+
+    async Task TogglePopup() => await marker1.TogglePopup();
+
+    async Task ToggleTooltip() => await marker2.ToggleTooltip();
 }

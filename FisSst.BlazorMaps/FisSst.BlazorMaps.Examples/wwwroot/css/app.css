@@ -52,12 +52,12 @@ app {
     z-index: 1000;
 }
 
-#blazor-error-ui .dismiss {
-    cursor: pointer;
-    position: absolute;
-    right: 0.75rem;
-    top: 0.5rem;
-}
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
 
 .navbar {
     height: var(--navbar-height);
@@ -96,12 +96,12 @@ app {
             color: var(--font-color-base);
         }
 
-        .active .label {
-            color: var(--green-two)!important;
-        }
+.active .label {
+    color: var(--green-two) !important;
+}
 
 .main {
-    height: calc(100% - var(--navbar-height));  
+    height: calc(100% - var(--navbar-height));
     display: grid;
     grid-template-rows: 0.1fr 0.9fr;
     grid-template-columns: 1fr minmax(400px, 0.25fr);
@@ -111,7 +111,7 @@ app {
     padding-right: 2rem;
     padding-bottom: 4rem;
     padding-top: 1rem;
-}   
+}
 
     .main .top-container {
         grid-column: 1/ span 2;
@@ -143,7 +143,7 @@ app {
         padding: 2rem var(--horizontal-outer-padding);
     }
 
-        .main .side-panel .header{
+        .main .side-panel .header {
             font-size: 1.5rem;
             font-weight: bold;
         }
@@ -164,10 +164,14 @@ app {
         background: var(--white);
     }
 
-    #mapId > div.leaflet-control-container > div.leaflet-top.leaflet-left > div > a.leaflet-control-zoom-in,
-    #mapId > div.leaflet-control-container > div.leaflet-top.leaflet-left > div > a.leaflet-control-zoom-out {
-        color: var(--green-four);
-        background: transparent;
-    }
+        #mapId > div.leaflet-control-container > div.leaflet-top.leaflet-left > div > a.leaflet-control-zoom-in,
+        #mapId > div.leaflet-control-container > div.leaflet-top.leaflet-left > div > a.leaflet-control-zoom-out {
+            color: var(--green-four);
+            background: transparent;
+        }
 
 
+/* Leaflet */
+.leaflet-track-icon {
+    border-radius: 6px;
+}

@@ -1,4 +1,5 @@
 ﻿@page "/objects"
+@inherits DemoBase
 
 <div class="top-container">
     <h1 class="page-header">Objects</h1>
@@ -10,44 +11,23 @@
 
 <div class="side-panel">
     <h3 class="header">Add</h3>
-    <SidePanelButton Label="polylines"
-                     IconSrc="@Icons.ObjectsAddPolylinesIconSrc"
-                     OnClick="async () => await AddPolylines()" />
-    <SidePanelButton Label="circlemarker"
-                     IconSrc="@Icons.ObjectsAddCircleMarkerIconSrc"
-                     OnClick="async () => await AddCircleMarkers()" />
-    <SidePanelButton Label="circles"
-                     IconSrc="@Icons.ObjectsAddCirclesIconSrc"
-                     OnClick="async () => await AddCircles()" />
-    <SidePanelButton Label="polygons"
-                     IconSrc="@Icons.ObjectsAddPolygonsIconSrc"
-                     OnClick="async () => await AddPolygons()" />
+    <SidePanelButton Label="polylines" IconSrc="@Icons.ObjectsAddPolylinesIconSrc" OnClick="async () => await AddPolylines()" />
+    <SidePanelButton Label="circlemarker" IconSrc="@Icons.ObjectsAddCircleMarkerIconSrc" OnClick="async () => await AddCircleMarkers()" />
+    <SidePanelButton Label="circles" IconSrc="@Icons.ObjectsAddCirclesIconSrc" OnClick="async () => await AddCircles()" />
+    <SidePanelButton Label="polygons" IconSrc="@Icons.ObjectsAddPolygonsIconSrc" OnClick="async () => await AddPolygons()" />
+    <SidePanelButton Label="Rectangles" IconSrc="@Icons.ObjectsAddPolygonsIconSrc" OnClick="async () => await AddRectangles()" />
     <h3 class="header">Change</h3>
-    <SidePanelButton Label="polylines"
-                     IconSrc="@Icons.ObjectsChangePolylinesIconSrc"
-                     OnClick="async () => await ChangePolylineStyle()" />
-    <SidePanelButton Label="circlemarker"
-                     IconSrc="@Icons.ObjectsChangeCirclemarkerIconSrc"
-                     OnClick="async () => await ChangeCircleMarkerStyle()" />
-    <SidePanelButton Label="circles"
-                     IconSrc="@Icons.ObjectsChangeCirclesIconSrc"
-                     OnClick="async () => await ChangeCircleStyle()" />
-    <SidePanelButton Label="polygons"
-                     IconSrc="@Icons.ObjectsChangePolygonsIconSrc"
-                     OnClick="async () => await ChangePolygonStyle()" />
+    <SidePanelButton Label="polylines" IconSrc="@Icons.ObjectsChangePolylinesIconSrc" OnClick="async () => await ChangePolylineStyle()" />
+    <SidePanelButton Label="circlemarker" IconSrc="@Icons.ObjectsChangeCirclemarkerIconSrc" OnClick="async () => await ChangeCircleMarkerStyle()" />
+    <SidePanelButton Label="circles" IconSrc="@Icons.ObjectsChangeCirclesIconSrc" OnClick="async () => await ChangeCircleStyle()" />
+    <SidePanelButton Label="polygons" IconSrc="@Icons.ObjectsChangePolygonsIconSrc" OnClick="async () => await ChangePolygonStyle()" />
+    <SidePanelButton Label="Rectangles" IconSrc="@Icons.ObjectsChangePolygonsIconSrc" OnClick="async () => await ChangeRectangleStyle()" />
     <h3 class="header">Delete</h3>
-    <SidePanelButton Label="polylines"
-                     IconSrc="@Icons.ObjectsDeletePolylinesIconSrc"
-                     OnClick="async () => await DeletePolylines()" />
-    <SidePanelButton Label="circlemarker"
-                     IconSrc="@Icons.ObjectsDeleteCirclemarkerIconSrc"
-                     OnClick="async () => await DeleteCircleMarkers()" />
-    <SidePanelButton Label="circles"
-                     IconSrc="@Icons.ObjectsDeleteCirclesIconSrc"
-                     OnClick="async () => await DeleteCircles()" />
-    <SidePanelButton Label="polygons"
-                     IconSrc="@Icons.ObjectsDeletePolygonsIconSrc"
-                     OnClick="async () => await DeletePolygons()" />
+    <SidePanelButton Label="polylines" IconSrc="@Icons.ObjectsDeletePolylinesIconSrc" OnClick="async () => await DeletePolylines()" />
+    <SidePanelButton Label="circlemarker" IconSrc="@Icons.ObjectsDeleteCirclemarkerIconSrc" OnClick="async () => await DeleteCircleMarkers()" />
+    <SidePanelButton Label="circles" IconSrc="@Icons.ObjectsDeleteCirclesIconSrc" OnClick="async () => await DeleteCircles()" />
+    <SidePanelButton Label="polygons" IconSrc="@Icons.ObjectsDeletePolygonsIconSrc" OnClick="async () => await DeletePolygons()" />
+    <SidePanelButton Label="Rectangles" IconSrc="@Icons.ObjectsDeletePolygonsIconSrc" OnClick="async () => await DeleteRectangles()" />
 </div>
 
 <style>
@@ -56,7 +36,7 @@
         display: grid;
         align-items: center;
         grid-template-rows: repeat(3, 8vh 12vh);
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
         .side-panel .header {

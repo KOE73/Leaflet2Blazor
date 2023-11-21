@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{87B08DA9
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. NuGet MinApp", "3. NuGet MinApp", "{49208F8B-CA0B-44C3-85DA-6E935448CC78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KOE.Leaflet2Blazor.NuGetMinApp", "KOE.Leaflet2Blazor.NuGetMinApp\KOE.Leaflet2Blazor.NuGetMinApp.csproj", "{2585C76A-871A-4FFE-AADB-719E5E10640B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +34,10 @@ Global
 		{40F99595-DBE9-4041-8B07-95CCF2F45600}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40F99595-DBE9-4041-8B07-95CCF2F45600}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40F99595-DBE9-4041-8B07-95CCF2F45600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2585C76A-871A-4FFE-AADB-719E5E10640B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2585C76A-871A-4FFE-AADB-719E5E10640B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2585C76A-871A-4FFE-AADB-719E5E10640B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2585C76A-871A-4FFE-AADB-719E5E10640B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A64A3280-8F76-4B14-A75D-C110E486E349} = {0B911A56-0261-497D-8095-19D73E4E030F}
 		{40F99595-DBE9-4041-8B07-95CCF2F45600} = {700C2E43-C890-49F1-8296-1AA0F4C48ED2}
+		{2585C76A-871A-4FFE-AADB-719E5E10640B} = {49208F8B-CA0B-44C3-85DA-6E935448CC78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4D918D5-77F9-4A13-A347-5C54CCB32578}

@@ -8,10 +8,9 @@
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageProjectUrl>https://github.com/KOE73/Leaflet2Blazor</PackageProjectUrl>
-		<Description>
-			Leaflet2Blazor is a Blazor library that provides a C# interface to maps provided by the Leaflet.js library. It includes many Leaflet.js features that are easily accessible from the C# layer within the project, and does not require the use of JavaScript.
-			It is also possible to edit objects.
-			Based on FIS-SST BlazorMaps and expanded with additional features.
+		<Description>Leaflet2Blazor is a Blazor library that provides a C# interface to maps provided by the Leaflet.js library. It includes many Leaflet.js features that are easily accessible from the C# layer within the project, and does not require the use of JavaScript.
+It is also possible to edit objects.
+Based on FIS-SST BlazorMaps and expanded with additional features.
 		</Description>
 		<Authors>KOE73</Authors>
 		<RepositoryUrl>https://github.com/KOE73/Leaflet2Blazor</RepositoryUrl>

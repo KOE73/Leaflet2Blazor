@@ -1,0 +1,22 @@
+<Project>
+
+	<PropertyGroup>
+		<LangVersion>10</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<Authors>KOE</Authors>
+		<!--<Company>Orenmin</Company>-->
+
+		<VersionMajor>1</VersionMajor>
+		<VersionMinor>0</VersionMinor>
+		<VersionPatch>1</VersionPatch>
+
+		<Version>$(VersionMajor).$(VersionMinor).$(VersionPatch)</Version>
+		<!--<Version>$(VersionMajor).$(VersionMinor).$(VersionPatch).$(VersionRevision)</Version>-->
+		
+		<PackageOutputPath>$(ProjectDir)..\NuGetOut</PackageOutputPath>
+		<!--<AssemblyName>KOE.Leaflet2Blazor</AssemblyName>-->
+	</PropertyGroup>
+
+</Project>

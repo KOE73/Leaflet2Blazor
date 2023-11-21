@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KOE.Leaflet2Blazor.JsReferenceBase">
+    <Position X="6.5" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACgAAAAQIAAAAAAAAAAAAAABAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Base\JsReferenceBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.LatLng">
+    <Position X="35.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Models\Basics\LatLng.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Point">
+    <Position X="36" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Models\Basics\Point.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.CircleMarker">
+    <Position X="9.5" Y="25.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAIAAAAAAAAAAACAAAAIAAABAAAQAEAAAAQiAAAA=</HashCode>
+      <FileName>Models\Vector Layers\CircleMarkers\CircleMarker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.CircleMarkerOptions">
+    <Position X="24.5" Y="19.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Vector Layers\CircleMarkers\CircleMarkerOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Circle">
+    <Position X="9.5" Y="30" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\Vector Layers\Circles\Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.CircleOptions">
+    <Position X="22.5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Vector Layers\Circles\CircleOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Event" Collapsed="true">
+    <Position X="16.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Events\Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Evented">
+    <Position X="6.75" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIEAAAIEgAAAAAAAAAACIAIAKAgAIAQBQAASCIA=</HashCode>
+      <FileName>Models\Events\Evented.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.MouseEvent" Collapsed="true">
+    <Position X="16.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Events\MouseEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Icon">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Icons\Icon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.IconOptions">
+    <Position X="32.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAACAAAAAACAAAQAAAAAAAAAACAYAQAAAAgk=</HashCode>
+      <FileName>Models\Icons\IconOptions.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IconSize" />
+      <Property Name="IconAnchor" />
+      <Property Name="PopupAnchor" />
+      <Property Name="TooltipAnchor" />
+      <Property Name="ShadowSize" />
+      <Property Name="ShadowAnchor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.InteractiveLayer">
+    <Position X="6.75" Y="19.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Layers\InteractiveLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.InteractiveLayerOptions">
+    <Position X="20.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAQA=</HashCode>
+      <FileName>Models\Layers\InteractiveLayerOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Layer">
+    <Position X="6.75" Y="10.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAChQFQADRABAAiwAABAACAkIACAABAAQBQCg0iAA=</HashCode>
+      <FileName>Models\Layers\Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.LayerOptions">
+    <Position X="20.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Layers\LayerOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.MapEvented">
+    <Position X="9.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Maps\MapEvented.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.MapOptions">
+    <Position X="32.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgBAAAAAAAAAAAAEAAAAABAAAAAQAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Models\Maps\MapOptions.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Center" />
+      <Property Name="SubOptions" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.MapSubOptions">
+    <Position X="32.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQAAAAAEAAAAAAABAUAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Maps\MapSubOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Marker">
+    <Position X="9.75" Y="21.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ARAAAYAAAIAAIAAAACAAAAIAAABBACQAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\UI Layers\Markers\Marker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.MarkerOptions">
+    <Position X="23" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAEIIAAAEAAEQBAAABCAIAACAAAEUEAJAgAAEAAAA=</HashCode>
+      <FileName>Models\UI Layers\Markers\MarkerOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Path">
+    <Position X="6.75" Y="21.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQQCAAAAAAAAAAABAAAAABAAAAAAAABAgCAAAAA=</HashCode>
+      <FileName>Models\Vector Layers\Paths\Path.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.PathOptions">
+    <Position X="20.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAEAAECACAgAAAAAAAAIAAACgACAAEACAAgAgAAAA=</HashCode>
+      <FileName>Models\Vector Layers\Paths\PathOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Polygon">
+    <Position X="6.75" Y="30" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Vector Layers\Polygons\Polygon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.PolygonOptions">
+    <Position X="20.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Vector Layers\Polygons\PolygonOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.Polyline">
+    <Position X="6.75" Y="25.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAFAgIAAECAAAAAAAAAAgAAAIAAAAEEAAAAAACAAAAA=</HashCode>
+      <FileName>Models\Vector Layers\Polylines\Polyline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.JsInterops.Base.BaseJsInterop">
+    <Position X="48.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JsInterops\Base\BaseJsInterop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.JsInterops.Base.JsInteropConfig">
+    <Position X="44" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBAAAAAAEAAAABAAIAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>JsInterops\Base\JsInteropConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.JsInterops.Events.EventedJsInterop">
+    <Position X="49.75" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>JsInterops\Events\EventedJsInterop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.1" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.JsInterops.IconFactories.IconFactoryJsInterop">
+    <Position X="49.75" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>JsInterops\IconFactories\IconFactoryJsInterop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.1" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.JsInterops.Maps.MapJsInterop">
+    <Position X="49.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>JsInterops\Maps\MapJsInterop.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.1" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.CircleFactory" BaseTypeListCollapsed="true">
+    <Position X="46.5" Y="15" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Factories\Vector Layers\Circles\CircleFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.IconFactory" BaseTypeListCollapsed="true">
+    <Position X="41.75" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAEAAAABAAAAAAQA=</HashCode>
+      <FileName>Factories\Icons\IconFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="iconFactoryJsInterop" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Right" Position="0.1" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.MarkerFactory" BaseTypeListCollapsed="true">
+    <Position X="43.25" Y="15" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Factories\UI Layers\Markers\MarkerFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.PolygonFactory" BaseTypeListCollapsed="true">
+    <Position X="49.75" Y="15" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Factories\Vector Layers\Polygons\PolygonFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.PolylineFactory" BaseTypeListCollapsed="true">
+    <Position X="54" Y="15" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Factories\Vector Layers\Polylines\PolylineFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.EventedJsInteropBase">
+    <Position X="40.25" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\Base\EventedJsInteropBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="EventedJsInterop" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.CircleMarkerFactory">
+    <Position X="39.75" Y="15" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Factories\Vector Layers\CircleMarkers\CircleMarkerFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.ZoomPanOptions" BaseTypeListCollapsed="true">
+    <Position X="38" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\ZoomPanOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.JSRuntimeBase" Collapsed="true">
+    <Position X="40.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAA=</HashCode>
+      <FileName>Factories\Base\MarkerFactoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.LatLngBoundsFactory">
+    <Position X="39" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\LatLngBounds\LatLngBoundsFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.ImageOverlayFactory">
+    <Position X="42.25" Y="11.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Factories\Raster Layers\ImageOverlay\ImageOverlayFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.LatLngBounds">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAEQAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Models\Basics\LatLngBounds.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.ImageOverlay">
+    <Position X="12.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIACAAAgAAAAAAAAAEAAAIAABAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\Raster Layers\ImageOverlay\ImageOverlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.ImageOverlayOptions" Collapsed="true">
+    <Position X="25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAACAAAAAAAAAgAAAAAAAAAABAIAAIAAAAAA=</HashCode>
+      <FileName>Models\Raster Layers\ImageOverlay\ImageOverlayOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KOE.Leaflet2Blazor.PolylineOptions">
+    <Position X="20.5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Models\Vector Layers\Polylines\PolylineOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="KOE.Leaflet2Blazor.JsInterops.Base.IBaseJsInterop">
+    <Position X="53.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JsInterops\Base\IBaseJsInterop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.JsInterops.Events.IEventedJsInterop">
+    <Position X="47.25" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JsInterops\Events\IEventedJsInterop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.JsInterops.IconFactories.IIconFactoryJsInterop">
+    <Position X="47.25" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JsInterops\IconFactories\IIconFactoryJsInterop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.JsInterops.Maps.IMapJsInterop">
+    <Position X="53.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JsInterops\Maps\IMapJsInterop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.ICircleMarkerFactory">
+    <Position X="39.75" Y="18" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\Vector Layers\CircleMarkers\ICircleMarkerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.ICircleFactory">
+    <Position X="46.5" Y="18" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\Vector Layers\Circles\ICircleFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.IIconFactory">
+    <Position X="44.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\Icons\IIconFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.IMarkerFactory">
+    <Position X="43.25" Y="18" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\UI Layers\Markers\IMarkerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.IPolygonFactory">
+    <Position X="49.75" Y="18" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\Vector Layers\Polygons\IPolygonFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.IPolylineFactory">
+    <Position X="54" Y="18" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\Vector Layers\Polylines\IPolylineFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.ILatLngBoundsFactory" Collapsed="true">
+    <Position X="30.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\LatLngBounds\ILatLngBoundsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KOE.Leaflet2Blazor.IImageOverlayFactory" Collapsed="true">
+    <Position X="29" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\Raster Layers\ImageOverlay\IImageOverlayFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

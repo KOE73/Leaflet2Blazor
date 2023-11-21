@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<!--<TargetFrameworks>net7.0;net8.0</TargetFrameworks>-->
+		<RootNamespace>KOE.Leaflet2Blazor</RootNamespace>
+		<LangVersion>11</LangVersion>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageProjectUrl>https://github.com/KOE73/Leaflet2Blazor</PackageProjectUrl>
+		<Description>
+			Leaflet2Blazor is a Blazor library that provides a C# interface to maps provided by the Leaflet.js library. It includes many Leaflet.js features that are easily accessible from the C# layer within the project, and does not require the use of JavaScript.
+			It is also possible to edit objects.
+			Based on FIS-SST BlazorMaps and expanded with additional features.
+		</Description>
+		<Authors>KOE73</Authors>
+		<RepositoryUrl>https://github.com/KOE73/Leaflet2Blazor</RepositoryUrl>
+		<PackageTags>Blazor;Leaflet.js;Leaflet</PackageTags>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\LICENSE.txt">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="System" />
+		<Using Include="System.Threading.Tasks" />
+		<Using Include="Microsoft.JSInterop" />
+	</ItemGroup>
+
+</Project>

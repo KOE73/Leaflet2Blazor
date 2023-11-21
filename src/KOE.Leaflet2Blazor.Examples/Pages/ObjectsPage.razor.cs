@@ -12,60 +12,58 @@ public partial class ObjectsPage : DemoBase
     [Inject] IRectangleFactory RectangleFactory { get; init; } = null!;
 
 
+    #region Polyline
+    Polyline? polyline1, polyline2;
+
+    PolylineOptions polylineOptions1 = new PolylineOptions() { Weight = 10, Color = "red" };
+    PolylineOptions polylineOptions2 = new PolylineOptions() { Weight = 5, Color = "green" };
+
+    async Task AddPolylines()
+    {
+        polyline1 = await PolylineFactory.CreateAndAddToMap(new List<LatLng> { LLPol_01, LLPol_02, LLPol_03, LLPol_04 }, mapRef);
+        polyline2 = await PolylineFactory.CreateAndAddToMap(new List<LatLng> { LLPol_11, LLPol_12 }, mapRef);
+
+        await polyline1.InvokeAsync("enableEdit");
+    }
+
+    async Task ChangePolylineStyle()
+    {
+        if(polyline1 is not null) await polyline1.SetStyle(polylineOptions1);
+        if(polyline2 is not null) await polyline2.SetStyle(polylineOptions2);
+    }
+
+    async Task DeletePolylines()
+    {
+        if(polyline1 is not null) { await polyline1.Remove(); polyline1 = null; }
+        if(polyline2 is not null) { await polyline2.Remove(); polyline2 = null; }
+    }
+    #endregion
 
 
-        #region Polyline
-        Polyline? polyline1, polyline2;
+    #region Polygons
+    Polygon? polygon1, polygon2;
 
-        PolylineOptions polylineOptions1 = new PolylineOptions() { Weight = 10, Color = "red" };
-        PolylineOptions polylineOptions2 = new PolylineOptions() { Weight = 5, Color = "green" };
+    PolygonOptions polygonOptions1 = new PolygonOptions() { Weight = 10, Color = "red" };
+    PolygonOptions polygonOptions2 = new PolygonOptions() { Weight = 5, Color = "green" };
 
-        async Task AddPolylines()
-        {
-            polyline1 = await PolylineFactory.CreateAndAddToMap(new List<LatLng> { LLPol_01, LLPol_02, LLPol_03, LLPol_04 }, mapRef);
-            polyline2 = await PolylineFactory.CreateAndAddToMap(new List<LatLng> { LLPol_11, LLPol_12 }, mapRef);
+    async Task AddPolygons()
+    {
+        polygon1 = await PolygonFactory.CreateAndAddToMap(new List<LatLng> { LLPnt_01, LLPnt_02, LLPnt_03 }, mapRef);
+        polygon2 = await PolygonFactory.CreateAndAddToMap(new List<LatLng> { LLPol_01, LLPol_02, LLPol_03, LLPol_04 }, mapRef);
+    }
 
-            await polyline1.InvokeAsync("enableEdit");
-        }
+    async Task ChangePolygonStyle()
+    {
+        if(polygon1 is not null) await polygon1.SetStyle(polygonOptions1);
+        if(polygon2 is not null) await polygon2.SetStyle(polygonOptions2);
+    }
 
-        async Task ChangePolylineStyle()
-        {
-            if(polyline1 is not null) await polyline1.SetStyle(polylineOptions1);
-            if(polyline2 is not null) await polyline2.SetStyle(polylineOptions2);
-        }
-
-        async Task DeletePolylines()
-        {
-            if(polyline1 is not null) { await polyline1.Remove(); polyline1 = null; }
-            if(polyline2 is not null) { await polyline2.Remove(); polyline2 = null; }
-        }
-        #endregion
-
-
-        #region Polygons
-        Polygon? polygon1,polygon2;
-
-        PolygonOptions polygonOptions1 = new PolygonOptions() { Weight = 10, Color = "red" };
-        PolygonOptions polygonOptions2 = new PolygonOptions() { Weight = 5, Color = "green" };
-
-        async Task AddPolygons()
-        {
-            polygon1 = await PolygonFactory.CreateAndAddToMap(new List<LatLng> { LLPnt_01, LLPnt_02, LLPnt_03 }, mapRef);
-            polygon2 = await PolygonFactory.CreateAndAddToMap(new List<LatLng> { LLPol_01, LLPol_02, LLPol_03, LLPol_04 }, mapRef);
-        }
-
-        async Task ChangePolygonStyle()
-        {
-            if(polygon1 is not null) await polygon1.SetStyle(polygonOptions1);
-            if(polygon2 is not null) await polygon2.SetStyle(polygonOptions2);
-        }
-
-        async Task DeletePolygons()
-        {
-            if(polygon1 is not null) { await polygon1.Remove(); polygon1 = null; }
-            if(polygon2 is not null) { await polygon2.Remove(); polygon2 = null; }
-        }
-        #endregion
+    async Task DeletePolygons()
+    {
+        if(polygon1 is not null) { await polygon1.Remove(); polygon1 = null; }
+        if(polygon2 is not null) { await polygon2.Remove(); polygon2 = null; }
+    }
+    #endregion
 
     #region Rectangle
     Rectangle? rectangle1, rectangle2;
@@ -96,7 +94,7 @@ public partial class ObjectsPage : DemoBase
 
 
     #region CircleMarkers
-    CircleMarker? circleMarker1,circleMarker2;
+    CircleMarker? circleMarker1, circleMarker2;
 
     CircleMarkerOptions circleMarkerOptionsInit = new CircleMarkerOptions() { Radius = 50 };
     CircleMarkerOptions circleMarkerOptions1 = new CircleMarkerOptions() { Color = "red", Radius = 15 };
@@ -123,13 +121,13 @@ public partial class ObjectsPage : DemoBase
 
 
     #region Circles 
-    Circle? circle1,circle2;
+    Circle? circle1, circle2;
 
     CircleOptions circleOptionsInit = new CircleOptions() { Radius = 100 };
     CircleOptions circleOptions1 = new CircleOptions() { Color = "red" };
     CircleOptions circleOptions2 = new CircleOptions() { Color = "green" };
-    
-    
+
+
     async Task AddCircles()
     {
         circle1 = await CircleFactory.CreateAndAddToMap(LLPnt_03, mapRef, circleOptionsInit);

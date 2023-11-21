@@ -14,10 +14,7 @@ public class LayerGroup : Layer
     {
     }
 
-
-
     async Task<LayerGroup> I(string function, params object?[] args) => await InvokeAsyncChain<LayerGroup>(function, args);
-
 
     public async Task<object> ToGeoJSON() => await InvokeAsync<object>("toGeoJSON");
 
